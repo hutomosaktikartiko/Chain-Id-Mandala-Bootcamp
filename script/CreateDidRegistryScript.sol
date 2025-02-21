@@ -8,7 +8,9 @@ contract CreateDidRegistryScript is Script {
     function run() external {
         vm.startBroadcast();
 
-        DidRegistry registry = DidRegistry(0x00);
+        DidRegistry registry = DidRegistry(
+            0xe6e02e83a368D09cbBf51eE019e0646C1406053D
+        );
         registry.createDid(DidRegistry.DidType.Verifier, "test metadata");
 
         vm.stopBroadcast();

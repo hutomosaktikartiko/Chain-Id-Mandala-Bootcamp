@@ -8,8 +8,10 @@ contract ModifyDidRegistryScript is Script {
     function run() external {
         vm.startBroadcast();
 
-        DidRegistry registry = DidRegistry(0x00);
-        registry.modifyDid(1, "new metadata modify");
+        DidRegistry registry = DidRegistry(
+            0xe6e02e83a368D09cbBf51eE019e0646C1406053D
+        );
+        registry.modifyDid(0, "new metadata modify");
 
         vm.stopBroadcast();
     }
